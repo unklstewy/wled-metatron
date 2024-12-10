@@ -1,0 +1,38 @@
+<head>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div id="container" class="container">
+        <div class="theme-selector-container">
+            <label for="themeSelector">Select Theme:</label>
+            <select id="themeSelector" class="theme-selector">
+                <option value="light-mode">Light Mode Solarized</option>
+                <option value="dark-mode" selected>Dark Mode Solarized</option>
+                <option value="color-blind-friendly">Color Blind Friendly</option>
+            </select>
+        </div>
+        <label for="ipAddressInput">WLED IP Address:</label>
+        <input type="text" id="ipAddressInput" placeholder="Enter IP Address">
+        <button id="ingestButton">Load Image</button>
+        <button id="startStreamingButton">Play</button>
+        <button id="stopStreamingButton">Stop Streaming</button>
+        <label for="durationInput">Time Between Frames (ms):</label>
+        <input type="number" id="durationInput" min="0" max="1000" value="100">
+        <div id="controlsContainer" class="loop-checkbox-container">
+            <div class="controls-labels">
+                <label for="loopCheckbox">Loop</label>
+                <label>Forward</label>
+                <label>Reverse</label>
+                <label>Shuffle</label>
+            </div>
+            <div class="controls-elements">
+                <input type="checkbox" id="loopCheckbox" value="true" checked>
+                <input type="radio" name="playMode" value="forward" checked>
+                <input type="radio" name="playMode" value="reverse">
+                <input type="radio" name="playMode" value="shuffle">
+            </div>
+        </div>
+        <pre id="output"></pre>
+    </div>
+    <script src="metatron.js"></script>
+</body>
